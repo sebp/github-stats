@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>GitHub Stats Test</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.5.1/css/all.min.css"
+    integrity="sha256-wiz7ZSCn/btzhjKDQBms9Hx4sSeUYsDrTLg7roPstac=" crossorigin="anonymous">
+  <script src="build/github-stats.js"></script>
+  <style>
+    .github-icon {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .github-icon span {
+      padding: .5rem;
+    }
+
+    .github-repository-name {
+      display: inline-block;
+      max-width: calc(100% - 1.2rem);
+      overflow: hidden;
+      text-overflow: ellipsis;
+      vertical-align: middle;
+    }
+
+    ul.github-facts {
+      display: flex;
+      gap: .4rem;
+      margin: .1rem 0 0;
+      padding: 0;
+      font-size: .95rem;
+      font-weight: 400;
+      list-style: none;
+      opacity: .75;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      width: 100%;
+    }
+
+    li.github-fact {
+      display: inline-block;
+      vertical-align: middle;
+    }
+
+    .github-fact-stars::before {
+      font: var(--fa-font-solid);
+      content: '\f005';
+      margin-right: .15rem;
+    }
+
+    .github-fact-forks::before {
+      font: var(--fa-font-solid);
+      content: '\e13b';
+      margin-right: .15rem;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Retrieve Stats of GitHub Repository</h1>
+  <a class="github-repository" href="https://github.com/sebp/scikit-survival" rel="noopener" target="_blank"
+    title="Go to repository">
+    <div class="github-icon">
+      <span><i class="fa-brands fa-github fa-lg"></i></span>
+    </div>
+    <div class="github-repository-name">
+      scikit-survival
+      <ul class="github-facts"></ul>
+    </div>
+  </a>
+</body>
+
+</html>
